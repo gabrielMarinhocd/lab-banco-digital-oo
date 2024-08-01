@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -10,9 +12,16 @@ public class Main {
 
 		cc.depositar(100);
 		cc.transferir(100, poupanca);
-		
-		cc.imprimirExtrato();
-		poupanca.imprimirExtrato();
+
+//		cc.imprimirExtrato();
+//		poupanca.imprimirExtrato();
+
+		List<Cliente> clientes = new ArrayList<>();
+
+		clientes.add(venilton);
+
+		Banco banco = new Banco();
+		banco.imprimeClientes(clientes);
 	}
 
 }

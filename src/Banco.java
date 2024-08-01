@@ -21,4 +21,18 @@ public class Banco {
 		this.contas = contas;
 	}
 
+	public void imprimeClientes(List<Cliente> clientes) {
+		System.out.println("=== Extrato Conta Corrente ===");
+
+		clientes.stream().forEach((Cliente cliente) -> {
+
+			Conta cc = new ContaCorrente(cliente);
+			Conta poupanca = new ContaPoupanca(cliente);
+
+			cc.imprimirExtrato();
+			poupanca.imprimirExtrato();
+		});
+
+	}
+
 }
